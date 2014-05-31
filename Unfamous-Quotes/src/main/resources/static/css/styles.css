@@ -1,0 +1,62 @@
+body .container-fluid {
+	padding-left : 6em;
+	padding-right : 6em;
+}
+
+.row.quotelist {
+	margin-top: 50px;
+}
+
+#quote-list .quoteText {
+	font-size: 1.2em;
+	font-family: cursiv;
+}
+
+#quote-list .quoteReference {
+	font-size: 0.8em;
+}
+
+#quote-list .quoteSource,#quote-list .firstUttered {
+	font-family: monospace;
+}
+
+#quote-list .submitter {
+	font-size: 0.8em;
+}
+
+.row.presentation {
+	margin-top: 2em;
+	min-height: 10em;
+}
+
+.font1 {
+	font-family: 'Rouge Script', cursive;
+}
+
+.font2 {
+	font-family: 'Yellowtail', cursive;
+}
+
+.font3 {
+	font-family: 'Parisienne', cursive;
+}
+
+.font4 {
+	font-family: 'Allura', cursive;
+}
+
+.font5 {
+	font-family: 'Mr De Haviland', cursive;
+}
+
+.font6 {
+	font-family: 'Tangerine', cursive;
+}
+
+.font7 {
+	font-family: 'Sacramento', cursive;
+}
+
+.font8 {
+	font-family: 'Herr Von Muellerhoff', cursive;
+}

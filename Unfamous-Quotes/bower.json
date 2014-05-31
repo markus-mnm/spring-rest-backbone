@@ -1,0 +1,23 @@
+{
+  "name": "Unfamous-Quotes",
+  "version": "0.0.1",
+  "authors": [
+    "Markus Ebenhoeh <markus@ebenhoeh.at>"
+  ],
+  "description": "The worlds least known and most unfamous quotes",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+	"lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "curl": "~0.8",
+    "backbone-amd": "~1"
+    "jquery": "~2",
+    "lodash": "~1",
+  }
+}

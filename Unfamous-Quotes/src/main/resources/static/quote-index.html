@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<title>Not-so-famous Quotes</title>
+
+<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"
+	media="screen">
+<link href="lib/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
+<link href="lib/bootstrap/css/bootstrap-glyphicons.css" rel="stylesheet">
+<link href="css/styles.css" rel="stylesheet">
+
+<link href='http://fonts.googleapis.com/css?family=Rouge+Script|Yellowtail|Parisienne|Allura|Mr+De+Haviland|Tangerine|Sacramento|Herr+Von+Muellerhoff' rel='stylesheet' type='text/css'>
+
+<script data-curl-run="run.js" src="lib/curl/src/curl.js"></script>
+<script type="text/html" id="quote-template">
+		<div class="col-md-1">
+			<span class="glyphicon glyphicon-edit"></span>
+			<span class="glyphicon glyphicon-trash"></span>
+		</div>
+		<div class="col-md-11">
+			<p class="quoteText">"<%= quoteText %>"</p>
+			<p class="quoteReference">
+				Uttered by <span class="quoteSource">"<%= quoteSource %>"</span> -
+				<span class="firstUttered">"<%= firstUttered %>"</span>
+			</p>
+			<p class="submitter">Submitted by <%= submitter %></p>
+
+		</div>
+</script>
+
+<script id="item-template" type="text/template">
+	<div class="view">
+		<label><%- quoteText %></label>
+		<a class="destroy"></a>
+	</div>
+	<input class="edit" type="text" value="<%- quoteText %>" />
+</script>
+
+	
+<script id="quote-edit-template" type="text/template">
+	<input class="editQuoteText" type="text" value="<%- quoteText %>" />
+	<input class="editQuoteSource" type="text" value="<%- quoteSource %>" />
+	<input class="editQuoteTime" type="text" value="<%- firstUttered %>" />
+	<input class="editQuoteSubmitter" type="text" value="<%- submitter %>" />
+</script>
+
+
+</head>
+<body>
+	<div class="container-fluid" id="quote-app">
+	
+	<!-- 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation"> -->
+	<!-- 		<div class="navbar-inner"> -->
+	<!-- 			<div class="container"></div> -->
+	<!-- 		</div> -->
+	<!-- 	</div> -->
+		<div class="row presentation">
+			<div class="col-md-12">
+				<h1>Quotes - what would we do without them?! </h1>
+				<p>This is the opportunity to make your or someone else's quote part of eternal history.</p>
+				<p>Why? Why not.</p>
+			</div>
+		</div>
+	
+		<div class="row entry">
+			<div class="col-md-12">
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-12">
+				<div id="quote-list" class="container">
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+
+
+</html>
