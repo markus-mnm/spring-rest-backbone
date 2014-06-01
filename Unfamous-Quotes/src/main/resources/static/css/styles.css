@@ -1,9 +1,6 @@
-body .container-fluid {
-	padding-left : 6em;
-	padding-right : 6em;
-}
 
-.row.quotelist {
+
+.row.quote-repository {
 	margin-top: 50px;
 }
 
@@ -11,6 +8,12 @@ body .container-fluid {
 	font-size: 1.2em;
 	font-family: cursiv;
 }
+
+#editQuoteText {
+   font-family: cursiv;
+   font-style: italic;
+}
+
 
 #quote-list .quoteReference {
 	font-size: 0.8em;

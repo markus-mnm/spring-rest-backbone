@@ -3,7 +3,7 @@ define(function(require) {
 	var QuoteModel = require('./QuoteModel');
 	var QuoteList = require('./QuoteList');
 	var QuoteView = require('./QuoteView');
-//	var QuoteListView = require('./QuoteListView');
+	var QuoteListView = require('./QuoteListView');
 	var QuoteAppView = require('./QuoteAppView');
 	var $ = require('jquery');
 
@@ -20,9 +20,11 @@ define(function(require) {
 //			el: $('.quote').first(),
 //			model: model
 //		});
+		console.log("READY 2");
 
 		var quoteList= new QuoteList();
-		new QuoteAppView({model:quoteList});
+		new QuoteListView({model:quoteList});
+		new QuoteAppView({model:quoteList});;
 	});
 
 });

@@ -3,21 +3,14 @@
 <head>
 <title>Not-so-famous Quotes</title>
 
-<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet"
-	media="screen">
-<link href="lib/bootstrap/css/bootstrap-responsive.css" rel="stylesheet">
-<link href="lib/bootstrap/css/bootstrap-glyphicons.css" rel="stylesheet">
+<link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
 <link href="css/styles.css" rel="stylesheet">
 
 <link href='http://fonts.googleapis.com/css?family=Rouge+Script|Yellowtail|Parisienne|Allura|Mr+De+Haviland|Tangerine|Sacramento|Herr+Von+Muellerhoff' rel='stylesheet' type='text/css'>
 
 <script data-curl-run="run.js" src="lib/curl/src/curl.js"></script>
 <script type="text/html" id="quote-template">
-		<div class="col-md-1">
-			<span class="glyphicon glyphicon-edit"></span>
-			<span class="glyphicon glyphicon-trash"></span>
-		</div>
-		<div class="col-md-11">
+		<div class="col-md-11 quoteDetails">
 			<p class="quoteText">"<%= quoteText %>"</p>
 			<p class="quoteReference">
 				Uttered by <span class="quoteSource">"<%= quoteSource %>"</span> -
@@ -26,6 +19,10 @@
 			<p class="submitter">Submitted by <%= submitter %></p>
 
 		</div>
+      <div class="col-md-1">
+         <span class="glyphicon glyphicon-edit"></span>
+         <span class="glyphicon glyphicon-trash"></span>
+      </div>
 </script>
 
 <script id="item-template" type="text/template">
@@ -38,10 +35,11 @@
 
 	
 <script id="quote-edit-template" type="text/template">
-	<input class="editQuoteText" type="text" value="<%- quoteText %>" />
-	<input class="editQuoteSource" type="text" value="<%- quoteSource %>" />
-	<input class="editQuoteTime" type="text" value="<%- firstUttered %>" />
-	<input class="editQuoteSubmitter" type="text" value="<%- submitter %>" />
+	<input id="editQuoteText" type="text" value="<%- quoteText %>" />
+	<input id="editQuoteSource" type="text" value="<%- quoteSource %>" />
+	<input id="editQuoteTime" type="text" value="<%- firstUttered %>" />
+	<input id="editQuoteSubmitter" type="text" value="<%- submitter %>" />
+   <span class="glyphicon glyphicon-add"></span>
 </script>
 
 
@@ -63,11 +61,39 @@
 		</div>
 	
 		<div class="row entry">
-			<div class="col-md-12">
+         <div class="col-md-1"></div>
+         <div class="col-md-5" role="form" id="quoteForm">         
+            <div class="form-group">
+               <label for="editQuoteText">Quote content</label>
+               <input type="email" class="form-control" id="editQuoteText" placeholder="Enter the quote's text">
+            </div>
+        
+            <div class="form-group">
+               <label for="editQuoteSource">Source of this gem?</label>
+               <input type="email" class="form-control" id="editQuoteSource" placeholder="Enter the quote's spritual source">
+            </div>
+        
+            <div class="form-group">
+               <label for="editQuoteTime">Quote birth</label>
+               <input type="email" class="form-control" id="editQuoteTime" placeholder="When was this quote conceived">
+            </div>
+        
+            <div class="form-group">
+               <label for="editQuoteSubmitter">Submitter</label>
+               <input type="email" class="form-control" id="editQuoteSubmitter" placeholder="Who are you - who is the submitted thisl">
+            </div>
+
+            <button type=reset" class="btn btn-default resetQuoteForm"><span class="glyphicon glyphicon-remove"></span> Reset</button>
+            <button type="submit" class="btn btn-default addNew"><span class="glyphicon glyphicon-ok"></span> Submit</button>
 			</div>
+         <div class="col-md-5">
+            <h1>Quotes - what would we do without them?! </h1>
+            <p>Almost everyone has certain phrases and sayings that identify the individual and which are identified with them.</p>
+            <p>What kind of verbal mannerism and unique marvels of expressions do you get to enjoy everyday?</p>
+         </div>         
 		</div>
 
-		<div class="row">
+		<div class="row quote-repository">
 			<div class="col-md-12">
 				<div id="quote-list" class="container">
 				</div>
