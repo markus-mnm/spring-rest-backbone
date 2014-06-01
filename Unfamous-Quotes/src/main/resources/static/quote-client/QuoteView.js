@@ -1,10 +1,10 @@
 
 define(function(require) {
-	var Backbone = require('Backbone');
+	var backbone = require('backbone');
 	var $ = require('jquery');
 	var _ = require('underscore');
 
-	return Backbone.View.extend({
+	return backbone.View.extend({
 		
 		tagName:  "div",
 		className  : "row",

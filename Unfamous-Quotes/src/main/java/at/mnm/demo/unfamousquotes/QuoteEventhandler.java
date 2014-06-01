@@ -13,7 +13,7 @@ public class QuoteEventhandler {
     @HandleBeforeSave
     public void handleBeforeSavingQuoteEvent(Quote p) {
         
-        logger.debug("handlePersonSave");
+        logger.debug("handleQuoteSave --- NOT CALLED, WHYYYYYYYYYYYY!!");
         
     }
 

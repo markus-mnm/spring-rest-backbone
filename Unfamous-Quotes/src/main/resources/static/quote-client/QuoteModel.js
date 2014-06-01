@@ -1,12 +1,9 @@
 
 
 define(function(require) {
-	var Backbone = require('Backbone');
+	var HAL = require('HAL');
 
-	return Backbone.Model.extend({
-		urlRoot: 'http://localhost:8080/quotes',
-		url: function() {
-			return this.urlRoot + '/' + this.id;
-		}
+	return HAL.Model.extend({
+
   	});
 });

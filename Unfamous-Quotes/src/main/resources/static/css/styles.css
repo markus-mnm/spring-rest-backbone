@@ -19,7 +19,7 @@
 	font-size: 0.8em;
 }
 
-#quote-list .quoteSource,#quote-list .firstUttered {
+#quote-list .quoteSource,#quote-list .firstDocumentedOccurence {
 	font-family: monospace;
 }
 

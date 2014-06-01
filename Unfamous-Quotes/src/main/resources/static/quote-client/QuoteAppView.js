@@ -1,11 +1,10 @@
 
 
 define(function(require) {
-	var Backbone = require('Backbone');
+	var backbone = require('backbone');
 	var $ = require('jquery');
-	var QuoteView = require('./QuoteView');
 
-	return Backbone.View.extend({
+	return backbone.View.extend({
 		
 		
 		el : $("#quote-app"),
@@ -15,21 +14,6 @@ define(function(require) {
 	        "click .addNew": "createNew",
 	      },
 	      
-		addOne: function(quoteModel) {
-			var view = new QuoteView({model: quoteModel});
-			var viewRenderReturn = view.render();
-			this.$("#quote-list").append(viewRenderReturn.el);
-		},
-		addAll: function() {
-			this.model.each(
-					this.addOne
-					, this
-					);
-		},
-
-	    render: function() {
-
-	    },
 		
       initialize: function() {
   		  console.log("quote app view initialse  2");
@@ -44,7 +28,7 @@ define(function(require) {
 		  this.model.create({
         	  quoteText: this.editQuoteText.val(),
         	  quoteSource: this.editQuoteSource.val(),
-        	  firstUttered: this.editQuoteTime.val(),
+        	  firstDocumentedOccurence: this.editQuoteTime.val(),
         	  submitter: this.editQuoteSubmitter.val(),
           });
 		  this.resetForm();

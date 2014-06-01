@@ -1,11 +1,10 @@
 package at.mnm.demo.unfamousquotes;
 
-import java.util.Date;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Quote {
@@ -13,20 +12,25 @@ public class Quote {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
+    @Size(max = 2000)
     private String quoteText;
+
+    @Size(max = 50)
     private String quoteSource;
+    
+    @Size(max = 50)
     private String submitter;
-    private Date firstUttered;
+    private String firstDocumentedOccurence;
 
     public Quote() {
 
     }
 
-    public Quote(String quoteText, String quoteSource, String submitter, Date firstUttered) {
+    public Quote(String quoteText, String quoteSource, String submitter, String firstDocumentedOccurence) {
         this.quoteText = quoteText;
         this.quoteSource = quoteSource;
         this.submitter = submitter;
-        this.firstUttered = firstUttered;
+        this.firstDocumentedOccurence = firstDocumentedOccurence;
     }
 
     public long getId() {
@@ -53,12 +57,12 @@ public class Quote {
         this.quoteSource = quoteSource;
     }
 
-    public Date getFirstUttered() {
-        return firstUttered;
+    public String getFirstDocumentedOccurence() {
+        return firstDocumentedOccurence;
     }
 
-    public void setFirstUttered(Date firstUttered) {
-        this.firstUttered = firstUttered;
+    public void setFirstDocumentedOccurence(String firstDocumentedOccurence) {
+        this.firstDocumentedOccurence = firstDocumentedOccurence;
     }
 
     public String getSubmitter() {

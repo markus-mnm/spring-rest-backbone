@@ -1,15 +1,12 @@
 
 define(function(require) {
-	var Backbone = require('Backbone');
 	var QuoteModel = require('./QuoteModel');
+	var HAL = require('HAL');
 
-	return Backbone.Collection.extend({
+	return HAL.Collection.extend({
 		model : QuoteModel,
 		url : '/quotes',
-		parse : function(response) {
-			return response._embedded.quotes;
-		} 
+	    itemRel : 'quotes'
 	});
-	
-	
+
 });

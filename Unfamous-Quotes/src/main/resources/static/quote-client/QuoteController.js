@@ -1,8 +1,6 @@
 
 define(function(require) {
-	var QuoteModel = require('./QuoteModel');
 	var QuoteList = require('./QuoteList');
-	var QuoteView = require('./QuoteView');
 	var QuoteListView = require('./QuoteListView');
 	var QuoteAppView = require('./QuoteAppView');
 	var $ = require('jquery');
