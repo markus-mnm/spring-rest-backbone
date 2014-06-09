@@ -5,8 +5,7 @@
 }
 
 #quote-list .quoteText {
-	font-size: 1.2em;
-	font-family: cursiv;
+	font-size: 2em;
 }
 
 #editQuoteText {
@@ -32,34 +31,34 @@
 	min-height: 10em;
 }
 
-.font1 {
+.font1 .quoteText{
 	font-family: 'Rouge Script', cursive;
 }
 
-.font2 {
+.font2 .quoteText{
 	font-family: 'Yellowtail', cursive;
 }
 
-.font3 {
+.font3 .quoteText{
 	font-family: 'Parisienne', cursive;
 }
 
-.font4 {
+.font4 .quoteText{
 	font-family: 'Allura', cursive;
 }
 
-.font5 {
+.font5 .quoteText{
 	font-family: 'Mr De Haviland', cursive;
 }
 
-.font6 {
+.font6 .quoteText{
 	font-family: 'Tangerine', cursive;
 }
 
-.font7 {
+.font7 .quoteText{
 	font-family: 'Sacramento', cursive;
 }
 
-.font8 {
+.font8 .quoteText{
 	font-family: 'Herr Von Muellerhoff', cursive;
 }

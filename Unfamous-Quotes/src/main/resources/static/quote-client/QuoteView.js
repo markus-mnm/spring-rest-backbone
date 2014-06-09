@@ -23,6 +23,9 @@ define(function(require) {
 
 		render: function(){
 			this.$el.html(this.template(this.model.attributes));
+			var modelUrl=this.model.links.self.href;
+			var modelId=modelUrl.substr(modelUrl.lastIndexOf('/') + 1);
+			this.$el.addClass("font" + (modelId%8+1));
 			return this;
 		},
 		
