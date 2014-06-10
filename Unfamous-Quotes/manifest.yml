@@ -1,8 +1,0 @@
----
-applications:
-- name: unfamous-quotes
-  mem: 512
-  disk: 523M
-  instances: 1
-  url: unfamous-quotes.stackato-cr6q.local
-  buildpack: https://github.com/cloudfoundry/java-buildpack
