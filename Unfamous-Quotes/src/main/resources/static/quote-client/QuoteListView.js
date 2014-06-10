@@ -2,7 +2,6 @@
 define(function(require) {
 	var backbone = require('backbone');
 	var $ = require('jquery');
-	var _ = require('underscore');
 	var QuoteView = require('./QuoteView');
 
 	return backbone.View.extend({

@@ -44,6 +44,18 @@
 </script>
 
 
+<script type="text/html" id="quote-showcase-template">
+      <div class="col-md-12 quoteDetails">
+         <p class="quoteText">"<%= quoteText %>"</p>
+         <p class="quoteReference">
+            Uttered by <span class="quoteSource">"<%= quoteSource %>"</span> -
+            <span class="firstDocumentedOccurence">"<%= firstDocumentedOccurence %>"</span>
+         </p>
+         <p class="submitter">Submitted by <%= submitter %></p>
+      </div>
+</script>
+
+
 </head>
 <body>
 	<div class="container-fluid" id="quote-app">

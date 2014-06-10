@@ -4,15 +4,15 @@
 	margin-top: 50px;
 }
 
-#quote-list .quoteText {
-	font-size: 2em;
-}
-
 #editQuoteText {
    font-family: cursiv;
    font-style: italic;
 }
 
+
+#quote-list .quoteText {
+   font-size: 2em;
+}
 
 #quote-list .quoteReference {
 	font-size: 0.8em;
@@ -27,9 +27,33 @@
 }
 
 .row.presentation {
-	margin-top: 2em;
+   margin: 5em;
 	min-height: 10em;
 }
+
+.presentation .quoteText {
+   font-size: 5em;
+}
+
+.presentation .quoteReference {
+   font-size: 1.2em;
+}
+
+.presentation .quoteSource,.presentation .firstDocumentedOccurence {
+   font-family: monospace;
+}
+
+.presentation .submitter {
+   font-size: 1.0em;
+}
+
+.presentation .quoteDetails {
+   text-align: center;
+}
+
+
+
+
 
 .font1 .quoteText{
 	font-family: 'Rouge Script', cursive;
