@@ -5,12 +5,12 @@ define(function (require) {
 		var QuoteList = require('./QuoteList');
 		var QuoteListView = require('./QuoteListView');
 		var QuoteAppView = require('./QuoteAppView');
-
-		console.log("READY 3");
+		var ShowCaseQuoteView = require('./ShowCaseQuoteView');
 
 		var quoteList= new QuoteList();
 		new QuoteListView({model:quoteList});
 		new QuoteAppView({model:quoteList});
+		new ShowCaseQuoteView({model:quoteList});;
 	});    
     
 });

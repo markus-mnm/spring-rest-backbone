@@ -16,7 +16,6 @@ define(function(require) {
 	      
 		
       initialize: function() {
-  		  console.log("quote app view initialse  2");
 	      this.editQuoteText = this.$("#quoteForm #editQuoteText");
 	      this.editQuoteSource = this.$("#quoteForm #editQuoteSource");
 	      this.editQuoteTime = this.$("#quoteForm #editQuoteTime");
@@ -24,7 +23,7 @@ define(function(require) {
 	      
       },
 	  
-	  createNew: function(todo) {
+	  createNew: function() {
 		  this.model.create({
         	  quoteText: this.editQuoteText.val(),
         	  quoteSource: this.editQuoteSource.val(),
