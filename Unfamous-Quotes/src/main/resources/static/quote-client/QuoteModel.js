@@ -3,7 +3,7 @@ define(function(require) {
 
    return HAL.Model.extend({
       initialize : function() {
-         this.id = -1;
+         this.id = null;
          if (this.links && this.links.self && this.links.self.href) {
             this.id = this.links.self.href.substr(this.links.self.href.lastIndexOf('/') + 1);
          }
