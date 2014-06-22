@@ -60,18 +60,34 @@
          <artifactId>validation-api</artifactId>
          <version>1.1.0.Final</version>
       </dependency>
-      
+
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-spring-service-connector</artifactId>
+        <version>1.0.0.RELEASE</version>
+      </dependency>
+      <dependency>
+        <groupId>org.springframework.cloud</groupId>
+        <artifactId>spring-cloud-cloudfoundry-connector</artifactId>
+        <version>1.0.0.RELEASE</version>
+      </dependency>
+
+
       <dependency>
          <groupId>mysql</groupId>
          <artifactId>mysql-connector-java</artifactId>
       </dependency>
-       
-<!--       <dependency> -->
-<!--          <groupId>postgresql</groupId> -->
-<!--          <artifactId>postgresql</artifactId> -->
-<!--          <version>9.1-901.jdbc4</version> -->
-<!--       </dependency> -->
 
+      <!-- <dependency> -->
+      <!-- <groupId>postgresql</groupId> -->
+      <!-- <artifactId>postgresql</artifactId> -->
+      <!-- <version>9.1-901.jdbc4</version> -->
+      <!-- </dependency> -->
+
+      <dependency>
+         <groupId>commons-dbcp</groupId>
+         <artifactId>commons-dbcp</artifactId>
+      </dependency>
    </dependencies>
 
 
@@ -91,13 +107,13 @@
       </plugins>
    </build>
 
-   <repositories>
-      <repository>
-         <id>org.springframework.maven.milestone</id>
-         <name>Spring Maven Milestone Repository</name>
-         <url>http://repo.spring.io/milestone</url>
-      </repository>
-   </repositories>
+<!--    <repositories> -->
+<!--       <repository> -->
+<!--          <id>org.springframework.maven.milestone</id> -->
+<!--          <name>Spring Maven Milestone Repository</name> -->
+<!--          <url>http://repo.spring.io/milestone</url> -->
+<!--       </repository> -->
+<!--    </repositories> -->
 
 </project>
 
