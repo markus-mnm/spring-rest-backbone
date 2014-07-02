@@ -1,0 +1,6 @@
+---
+applications:
+- name: unfamous-quotes
+  memory: 512M
+  env:
+    JAVA_OPTS: -Dspring.profiles.active=cloud
