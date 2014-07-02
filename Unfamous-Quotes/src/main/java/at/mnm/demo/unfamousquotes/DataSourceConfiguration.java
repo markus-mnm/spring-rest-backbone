@@ -11,7 +11,7 @@ public class DataSourceConfiguration {
    private static Log logger = LogFactory.getLog(DataSourceConfiguration.class);
 
    @Configuration()
-   @Profile({ "default" })
+   @Profile({ "cloud" })
    public static class CloudConfiguration extends AbstractCloudConfig {
       @Bean(destroyMethod = "close")
       public javax.sql.DataSource dataSource() {
