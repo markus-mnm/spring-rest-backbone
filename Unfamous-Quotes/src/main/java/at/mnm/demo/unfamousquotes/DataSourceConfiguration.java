@@ -11,15 +11,6 @@ public class DataSourceConfiguration {
    private static Log logger = LogFactory.getLog(DataSourceConfiguration.class);
 
    @Configuration()
-   @Profile("local")
-   public static class LocalConfiguration {
-
-      public LocalConfiguration() {
-         logger.info(" LocalConfiguration: no data source set-up required because auto jpa - magic");
-      }
-   }
-
-   @Configuration()
    @Profile({ "default" })
    public static class CloudConfiguration extends AbstractCloudConfig {
       @Bean(destroyMethod = "close")
